@@ -1,0 +1,112 @@
+FabberRunDataNewimage::Loading mask data from 'mask.nii.gz'
+FabberRunDataNewimage::Dimensions: x=64, y=64, z=24, vols=1
+FabberRunDataNewimage::Voxel size: x=1mm, y=1mm, z=1mm, TR=1 sec
+FabberRunDataNewimage::Intents: 0, 0, 0, 0
+FabberRunDataNewimage::Setting coordinates from extent
+FabberRunData::FABBER release: v4.0.10-dirty
+FabberRunData::Last commit: Wed May 19 11:36:18 2021
+FabberRunData::Start time: Fri Apr 14 11:29:42 2023
+FabberRunData::Parameter =fabber_asl
+FabberRunData::Parameter allow-bad-voxels=
+FabberRunData::Parameter bolus=1.8
+FabberRunData::Parameter casl=
+FabberRunData::Parameter convergence=trialmode
+FabberRunData::Parameter data=asldata_diff_1.nii.gz
+FabberRunData::Parameter data-order=singlefile
+FabberRunData::Parameter disp=none
+FabberRunData::Parameter dump-param-names=
+FabberRunData::Parameter exch=mix
+FabberRunData::Parameter incbat=
+FabberRunData::Parameter inctiss=
+FabberRunData::Parameter inferbat=
+FabberRunData::Parameter infertiss=
+FabberRunData::Parameter link-to-latest=
+FabberRunData::Parameter mask=mask.nii.gz
+FabberRunData::Parameter max-iterations=20
+FabberRunData::Parameter max-trials=10
+FabberRunData::Parameter method=vb
+FabberRunData::Parameter model=aslrest
+FabberRunData::Parameter noise=white
+FabberRunData::Parameter output=/Users/mac/Desktop/Workspace/Martin_code/new/Real_Data/Real_Data_final/General/reduced_set_1/aVB/BASIL/out_1/step1
+FabberRunData::Parameter pld1=0.25
+FabberRunData::Parameter pld2=0.5
+FabberRunData::Parameter pld3=0.75
+FabberRunData::Parameter pld4=1.0
+FabberRunData::Parameter pld5=1.25
+FabberRunData::Parameter pld6=1.5
+FabberRunData::Parameter repeats=1
+FabberRunData::Parameter save-free-energy=
+FabberRunData::Parameter save-mean=
+FabberRunData::Parameter save-mvn=
+FabberRunData::Parameter save-noise-mean=
+FabberRunData::Parameter save-noise-std=
+FabberRunData::Parameter save-std=
+FabberRunData::Parameter save-zstat=
+FabberRunData::Parameter t1=1.3
+FabberRunData::Parameter t1b=1.65
+FabberRunData::Parameter tau=1.4
+Inference using resting state ASL model
+INCLUSIONS:
+Tissue
+Number of components: 1
+Bolus arrival time
+INFERENCE:
+Tissue
+Bolus arrival time
+------
+Kinetic model:
+Data being analysed using CASL inversion profile
+Tissue model:No dispersion | Well mixed
+------
+Data parameters: #repeats = [ 1 1 1 1 1 1 ]
+ t1 = 1.3, t1b = 1.65 bolus duration (tau) = 1.4
+TIs: 1.65 1.9 2.15 2.4 2.65 2.9 
+FabberRunData::Forward Model version fwdmodel_asl_rest.cc Revision v2.0.7-dirty Last commit Fri Mar 5 18:54:28 2021
+InferenceTechnique::Model has 2 parameters
+InferenceTechnique::Using --allow-bad-voxels: numerical errors in a voxel will
+InferenceTechnique::simply stop the calculation of that voxel.
+InferenceTechnique::Check log for 'Going on to the next voxel' messages.
+InferenceTechnique::Note that you should get very few (if any) exceptions like this;InferenceTechnique::they are probably due to bugs or a numerically unstable model.WhiteNoiseMode::Pattern of phis used is [ 1 ]
+Vb::Noise has 1 parameters
+FabberRunData::Num voxels 33222
+FabberRunDataNewimage::Loading data from 'asldata_diff_1.nii.gz'
+FabberRunDataNewimage::Dimensions: x=64, y=64, z=24, vols=6
+FabberRunDataNewimage::Voxel size: x=1mm, y=1mm, z=1mm, TR=1 sec
+FabberRunDataNewimage::Intents: 0, 0, 0, 0
+FabberRunDataNewimage::Applying mask to data...
+FabberRunDataNewimage::GetVoxelData: asldata_diff_1.nii.gz mean value=2.32591
+PriorFactory::CreatePriors DefaultPrior: Parameter 0 'ftiss' mean: 0 precision: 1e-12
+PriorFactory::CreatePriors DefaultPrior: Parameter 1 'delttiss' mean: 0.7 precision: 10.0144
+Vb::Voxelwise calculations loop
+WhiteNoiseMode::Pattern of phis used is [ 1 1 1 1 1 1 ]
+FabberRunData::Saving results 
+InferenceTechnique::Preparing to save results...
+FabberRunDataNewimage::Saving to nifti: finalMVN
+InferenceTechnique::Writing means...
+FabberRunDataNewimage::Saving to nifti: mean_ftiss
+FabberRunDataNewimage::Saving to nifti: zstat_ftiss
+FabberRunDataNewimage::Saving to nifti: std_ftiss
+FabberRunDataNewimage::Saving to nifti: mean_delttiss
+FabberRunDataNewimage::Saving to nifti: zstat_delttiss
+FabberRunDataNewimage::Saving to nifti: std_delttiss
+InferenceTechnique::Writing model time series data (fit, residuals and model-specific output)
+InferenceTechnique::Evaluating model for output: 
+InferenceTechnique::Evaluating model for output: aif
+InferenceTechnique::Done writing results.
+Vb::Preparing to save results...
+Vb::Writing noise
+FabberRunDataNewimage::Saving to nifti: noise_means
+FabberRunDataNewimage::Saving to nifti: noise_stdevs
+Vb::Writing free energy
+FabberRunDataNewimage::Saving to nifti: freeEnergy
+Vb::Done writing results.
+FabberRunData::All done.
+WARNING ONCE: Unused option specified: bolus
+WARNING ONCE: Unused option specified: data-order
+FabberRunData::Start time: Fri Apr 14 11:29:42 2023
+FabberRunData::End time: Fri Apr 14 11:29:49 2023
+FabberRunData::Duration: 7 seconds.
+
+Summary of warnings (2 distinct warnings)
+Issued once: Unused option specified: bolus
+Issued once: Unused option specified: data-order

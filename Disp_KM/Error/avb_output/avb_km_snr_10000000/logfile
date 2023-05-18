@@ -1,0 +1,665 @@
+INFO:DataModel:Creating native data structure
+INFO:Volume:Volumetric data structure: native
+INFO:Volume: - File extension: .nii.gz
+INFO:Volume: - Shape: [10, 10, 10] (Source data contained 6 volumes)
+INFO:Volume: - No mask supplied
+INFO:Volume: - Masked volume contains 1000 voxels
+WARNING:Volume:Voxel sizes not provided for Numpy array input - assuming 1mm isotropic
+INFO:Volume: - Voxel sizes: [1.0, 1.0, 1.0]
+INFO:DataModel:Creating model inference data structure
+INFO:DataModel: - Model structure is same as native structure
+INFO:DataModel: - Model space partial volumes are all good
+INFO:AslRestDisp:Model: ASL resting state model with gamma dispersion: Unknown version
+INFO:AslRestDisp: - Bolus duration: 1.8
+INFO:AslRestDisp: - Data is CASL/pCASL: True
+INFO:AslRestDisp: - Inversion times: None
+INFO:AslRestDisp: - Post-labelling delays (for CASL instead of TIs): [0.25, 0.5, 0.75, 1.0, 1.25, 1.5]
+INFO:AslRestDisp: - Number of repeats - single value or one per TI/PLD: [1]
+INFO:AslRestDisp: - Increase in TI/PLD per slice: 0
+INFO:AslRestDisp: - Tissue T1 value: 1.3
+INFO:AslRestDisp: - Bolus arrival time: 1.3
+INFO:AslRestDisp: - Bolus arrival time prior std.dev.: None
+INFO:AslRestDisp: - Perfusion value to use in estimation of effective T1: 0.01
+INFO:AslRestDisp: - Blood/tissue partition coefficient. If only inferring on one tissue, default is 0.9; if inferring on both GM/WM default is 0.98/0.8 respectively. See --pcwm: None
+INFO:AslRestDisp: - Include WM component at each node: False
+INFO:AslRestDisp: - Infer WM parameters at each node: False
+INFO:AslRestDisp: - Partial volume correction - equivalent to incwm and inferwm: False
+INFO:AslRestDisp: - WM T1 value: 1.1
+INFO:AslRestDisp: - WM perfusion value to use if incwm=True and inferwm=False: 0
+INFO:AslRestDisp: - WM arterial transit time. Used as prior and initial posterior if inferwm=True, used as fixed value if inferwm=False: 1.6
+INFO:AslRestDisp: - WM perfusion value to use in estimation of effective T1: 0.003
+INFO:AslRestDisp: - WM parition coefficient. See --pc: 0.8
+INFO:AslRestDisp: - Blood T1 value: 1.6
+INFO:AslRestDisp: - Arterial bolus arrival time: None
+INFO:AslRestDisp: - Arterial bolus arrival time prior std.dev.: None
+INFO:AslRestDisp: - Only infer arterial component not tissue: None
+INFO:AslRestDisp: - Infer transit time: True
+INFO:AslRestDisp: - Infer arterial component: None
+INFO:AslRestDisp: - Infer T1 value: None
+INFO:AslRestDisp: - Initialization method for ATT (max=max signal - bolus duration): 
+INFO:AslRestDisp: - GM partial volume: 1.0
+INFO:AslRestDisp: - WM partial volume: 0.0
+INFO:AslRestDisp: - Time interval for numerical convolution: 0.1
+INFO:AslRestDisp: - Convolution type ('gamma' only supprted type presently): gamma
+INFO:AslRestDisp: - Whether to infer parameters of the dispersion: True
+INFO:vaby.main:AVB 0.0.2.post28
+INFO:Avb:Starting VB inference
+INFO:Avb: - Parameter: ftiss (No description given)
+INFO:Avb:   - Prior: Gaussian (1.500000, 1000000.000000) Non-spatial prior (1.500000, 1000000.000000)
+INFO:Avb:   - Posterior: Gaussian (1.500000, 1.500000)
+INFO:Avb: - Parameter: delttiss (No description given)
+INFO:Avb:   - Prior: Gaussian (1.300000, 1.000000) Non-spatial prior (1.300000, 1.000000)
+INFO:Avb:   - Posterior: Gaussian (1.300000, 1.000000)
+INFO:Avb: - Parameter: s (No description given)
+INFO:Avb:   - Prior: Log-Normal (7.400000, 2.000000) Non-spatial prior (2.001480, 0.693147)
+INFO:Avb:   - Posterior: Log-Normal (7.400000, 2.000000)
+INFO:Avb: - Parameter: sp (No description given)
+INFO:Avb:   - Prior: Log-Normal (0.740000, 2.000000) Non-spatial prior (-0.301105, 0.693147)
+INFO:Avb:   - Posterior: Log-Normal (0.740000, 2.000000)
+INFO:Avb:Doing analytic VB
+INFO:Avb: - Iteration 0000
+INFO:Avb:   - native mean: [6.472799  1.3       7.400001  0.7399999] variance: [1.5        1.         0.69314736 0.69314736]
+INFO:Avb:   - Noise mean: 5e-07 variance: 5e-15
+INFO:Avb:   - F: 243.7 (Voxel: -237.5, Node: -6.205)
+INFO:Avb: - Iteration 0001
+INFO:Avb:   - native mean: [5.455692   1.3001636  7.400042   0.73999834] variance: [5.5012106e+05 3.6906734e-02 6.9314659e-01 6.9314712e-01]
+INFO:Avb:   - Noise mean: 1.777e-06 variance: 1.27e-12
+INFO:Avb:   - F: 62.11 (Voxel: -60.04, Node: -2.067)
+INFO:Avb: - Iteration 0002
+INFO:Avb:   - native mean: [8.204562  1.2999176 7.400066  0.7399974] variance: [1.7862381e+05 9.5124739e-01 6.9314635e-01 6.9314706e-01]
+INFO:Avb:   - Noise mean: 1.048e-05 variance: 4.47e-11
+INFO:Avb:   - F: 341.3 (Voxel: -340.7, Node: -0.5767)
+INFO:Avb: - Iteration 0003
+INFO:Avb:   - native mean: [9.432369   1.2997802  7.4002733  0.73998874] variance: [4.4228125e+04 6.4861763e-01 6.9314039e-01 6.9314599e-01]
+INFO:Avb:   - Noise mean: 4.415e-05 variance: 8.465e-10
+INFO:Avb:   - F: 790.3 (Voxel: -788.1, Node: -2.154)
+INFO:Avb: - Iteration 0004
+INFO:Avb:   - native mean: [9.791002  1.2989247 7.401341  0.7399446] variance: [1.0038959e+04 9.5157534e-01 6.9310367e-01 6.9313961e-01]
+INFO:Avb:   - Noise mean: 0.0002167 variance: 2.06e-08
+INFO:Avb:   - F: 1593 (Voxel: -1591, Node: -2.042)
+INFO:Avb: - Iteration 0005
+INFO:Avb:   - native mean: [9.739465   1.2950386  7.4063487  0.73973864] variance: [2.3687524e+03 8.8093787e-01 6.9292784e-01 6.9310904e-01]
+INFO:Avb:   - Noise mean: 0.001024 variance: 4.759e-07
+INFO:Avb:   - F: 2868 (Voxel: -2865, Node: -3.052)
+INFO:Avb: - Iteration 0006
+INFO:Avb:   - native mean: [9.378199  1.2785146 7.426799  0.7388994] variance: [642.34485      0.95042217   0.6921894    0.6929791 ]
+INFO:Avb:   - Noise mean: 0.004784 variance: 1.033e-05
+INFO:Avb:   - F: 889.3 (Voxel: -885.9, Node: -3.483)
+INFO:Avb: - Iteration 0007
+INFO:Avb:   - native mean: [8.797164   1.2416766  7.474666   0.73700756] variance: [229.40694      0.88233995   0.69007295   0.69260687]
+INFO:Avb:   - Noise mean: 0.02016 variance: 0.0001822
+INFO:Avb:   - F: 369 (Voxel: -364.7, Node: -4.272)
+INFO:Avb: - Iteration 0008
+INFO:Avb:   - native mean: [8.654248  1.2109663 7.515171  0.7355826] variance: [105.501816     0.75959474   0.68638474   0.6919446 ]
+INFO:Avb:   - Noise mean: 0.07375 variance: 0.002421
+INFO:Avb:   - F: 34.63 (Voxel: -29.58, Node: -5.042)
+INFO:Avb: - Iteration 0009
+INFO:Avb:   - native mean: [8.792991   1.2061414  7.5229893  0.73566914] variance: [57.577873   0.5854182  0.6813474  0.6910069]
+INFO:Avb:   - Noise mean: 0.2347 variance: 0.02489
+INFO:Avb:   - F: 32.36 (Voxel: -26.56, Node: -5.798)
+INFO:Avb: - Iteration 0010
+INFO:Avb:   - native mean: [9.07763   1.2190717 7.510346  0.7367247] variance: [32.89762    0.4039796  0.6763411  0.6899399]
+INFO:Avb:   - Noise mean: 0.6678 variance: 0.2128
+INFO:Avb:   - F: 35.24 (Voxel: -28.66, Node: -6.577)
+INFO:Avb: - Iteration 0011
+INFO:Avb:   - native mean: [8.485545   1.222323   7.5319366  0.73717505] variance: [17.020004    0.27742687  0.6714468   0.68877584]
+INFO:Avb:   - Noise mean: 1.679 variance: 1.566
+INFO:Avb:   - F: 54.72 (Voxel: -47.33, Node: -7.386)
+INFO:Avb: - Iteration 0012
+INFO:Avb:   - native mean: [7.394371   1.2813778  7.464759   0.73968655] variance: [4.2008699e+04 2.2354275e-01 6.6442651e-01 6.8770933e-01]
+INFO:Avb:   - Noise mean: 3.76 variance: 9.737
+INFO:Avb:   - F: 2051 (Voxel: -2043, Node: -7.771)
+INFO:Avb: - Iteration 0013
+INFO:Avb:   - native mean: [7.098097   1.2930787  7.4334326  0.74248433] variance: [5.9014902e+04 1.7430472e-01 6.5346438e-01 6.8646723e-01]
+INFO:Avb:   - Noise mean: 7.586 variance: 52.51
+INFO:Avb:   - F: 7.206e+05 (Voxel: -7.206e+05, Node: -8.269)
+INFO:Avb: - Iteration 0014
+INFO:Avb:   - native mean: [7.759827  1.3252431 7.5066476 0.7413263] variance: [8.1047391e+04 1.9089246e-01 6.3641268e-01 6.8495136e-01]
+INFO:Avb:   - Noise mean: 14.7 variance: 262.8
+INFO:Avb:   - F: 1.203e+07 (Voxel: -1.203e+07, Node: -8.425)
+INFO:Avb: - Iteration 0015
+INFO:Avb:   - native mean: [7.761824   1.3440694  7.413896   0.74481714] variance: [4.8051469e+04 1.9726688e-01 6.1178041e-01 6.8252748e-01]
+INFO:Avb:   - Noise mean: 27.32 variance: 1209
+INFO:Avb:   - F: 4.296e+05 (Voxel: -4.296e+05, Node: -8.908)
+INFO:Avb: - Iteration 0016
+INFO:Avb:   - native mean: [6.9723496  1.268131   7.4181123  0.74233556] variance: [4.9037215e+04 2.0698990e-01 5.8317250e-01 6.7890185e-01]
+INFO:Avb:   - Noise mean: 51.74 variance: 5637
+INFO:Avb:   - F: 3.549e+05 (Voxel: -3.549e+05, Node: -8.965)
+INFO:Avb: - Iteration 0017
+INFO:Avb:   - native mean: [7.5734167 1.3076111 7.4168863 0.7447017] variance: [8.4020773e+04 2.4119788e-01 5.5848753e-01 6.7469871e-01]
+INFO:Avb:   - Noise mean: 94.79 variance: 2.368e+04
+INFO:Avb:   - F: 5.485e+05 (Voxel: -5.485e+05, Node: -8.977)
+INFO:Avb: - Iteration 0018
+INFO:Avb:   - native mean: [8.41369    1.2928535  7.4442515  0.74004453] variance: [4.6024754e+04 1.9681549e-01 5.3606570e-01 6.7007494e-01]
+INFO:Avb:   - Noise mean: 172.9 variance: 9.375e+04
+INFO:Avb:   - F: 2.322e+07 (Voxel: -2.322e+07, Node: -9.571)
+INFO:Avb: - Iteration 0019
+INFO:Avb:   - native mean: [8.01442   1.2958198 7.405525  0.741068 ] variance: [5.4036516e+04 2.1846555e-01 5.1926345e-01 6.6078073e-01]
+INFO:Avb:   - Noise mean: 301.9 variance: 3.285e+05
+INFO:Avb:   - F: 3.342e+04 (Voxel: -3.341e+04, Node: -9.539)
+INFO:Avb: - Iteration 0020
+INFO:Avb:   - native mean: [7.971185   1.3057603  7.435603   0.74092644] variance: [5.5022609e+04 2.1671607e-01 5.0850910e-01 6.5022361e-01]
+INFO:Avb:   - Noise mean: 509.9 variance: 1.036e+06
+INFO:Avb:   - F: 4.568e+05 (Voxel: -4.567e+05, Node: -9.803)
+INFO:Avb: - Iteration 0021
+INFO:Avb:   - native mean: [7.6712728 1.2832681 7.4446115 0.740193 ] variance: [6.0024215e+04 2.0215820e-01 5.0093144e-01 6.4097267e-01]
+INFO:Avb:   - Noise mean: 840.3 variance: 3.033e+06
+INFO:Avb:   - F: 2.302e+04 (Voxel: -2.301e+04, Node: -10.01)
+INFO:Avb: - Iteration 0022
+INFO:Avb:   - native mean: [7.8609843 1.3094987 7.4271097 0.741311 ] variance: [7.1025602e+04 2.0913903e-01 4.9641728e-01 6.2523836e-01]
+INFO:Avb:   - Noise mean: 1339 variance: 8.193e+06
+INFO:Avb:   - F: 4.297e+04 (Voxel: -4.296e+04, Node: -10.12)
+INFO:Avb: - Iteration 0023
+INFO:Avb:   - native mean: [8.533891  1.3032532 7.4202833 0.7416243] variance: [5.8028785e+04 1.8949823e-01 4.9246791e-01 6.1106592e-01]
+INFO:Avb:   - Noise mean: 2060 variance: 2.02e+07
+INFO:Avb:   - F: 2.697e+05 (Voxel: -2.697e+05, Node: -10.42)
+INFO:Avb: - Iteration 0024
+INFO:Avb:   - native mean: [8.229537  1.3054234 7.4236736 0.7399463] variance: [6.0037609e+04 2.0127845e-01 4.8935077e-01 6.0059726e-01]
+INFO:Avb:   - Noise mean: 3082 variance: 4.633e+07
+INFO:Avb:   - F: 5.667e+04 (Voxel: -5.666e+04, Node: -10.5)
+INFO:Avb: - Iteration 0025
+INFO:Avb:   - native mean: [8.488527  1.3183601 7.418265  0.7397606] variance: [3.3023039e+04 2.0608966e-01 4.8756844e-01 5.8769786e-01]
+INFO:Avb:   - Noise mean: 4489 variance: 1.001e+08
+INFO:Avb:   - F: 4.545e+04 (Voxel: -4.544e+04, Node: -10.9)
+INFO:Avb: - Iteration 0026
+INFO:Avb:   - native mean: [7.3614073  1.2715306  7.479608   0.73878694] variance: [3.2018260e+04 2.0859656e-01 4.8536682e-01 5.7271409e-01]
+INFO:Avb:   - Noise mean: 6277 variance: 1.938e+08
+INFO:Avb:   - F: 3.092e+04 (Voxel: -3.091e+04, Node: -11)
+INFO:Avb: - Iteration 0027
+INFO:Avb:   - native mean: [6.885649  1.2940545 7.4763346 0.7391546] variance: [8.4011664e+04 2.2851664e-01 4.8481596e-01 5.6440550e-01]
+INFO:Avb:   - Noise mean: 8599 variance: 3.634e+08
+INFO:Avb:   - F: 3.897e+04 (Voxel: -3.896e+04, Node: -10.86)
+INFO:Avb: - Iteration 0028
+INFO:Avb:   - native mean: [8.0811615 1.3130796 7.418184  0.7401816] variance: [8.1023859e+04 2.0388229e-01 4.8470360e-01 5.5210537e-01]
+INFO:Avb:   - Noise mean: 1.125e+04 variance: 6.154e+08
+INFO:Avb:   - F: 1.749e+04 (Voxel: -1.748e+04, Node: -11.14)
+INFO:Avb: - Iteration 0029
+INFO:Avb:   - native mean: [8.051469  1.3110105 7.4247627 0.7413535] variance: [7.1048055e+04 1.9739401e-01 4.8391777e-01 5.4242963e-01]
+INFO:Avb:   - Noise mean: 1.427e+04 variance: 9.576e+08
+INFO:Avb:   - F: 3.164e+04 (Voxel: -3.163e+04, Node: -11.23)
+INFO:Avb: - Iteration 0030
+INFO:Avb:   - native mean: [8.482873  1.328621  7.3858404 0.7402599] variance: [5.1038980e+04 2.2416106e-01 4.8342046e-01 5.3419858e-01]
+INFO:Avb:   - Noise mean: 1.752e+04 variance: 1.374e+09
+INFO:Avb:   - F: 1.255e+05 (Voxel: -1.255e+05, Node: -11.39)
+INFO:Avb: - Iteration 0031
+INFO:Avb:   - native mean: [7.656741   1.2632908  7.451828   0.73886156] variance: [4.0026664e+04 2.0095478e-01 4.8195159e-01 5.3152281e-01]
+INFO:Avb:   - Noise mean: 2.08e+04 variance: 1.833e+09
+INFO:Avb:   - F: 7.548e+04 (Voxel: -7.547e+04, Node: -11.57)
+INFO:Avb: - Iteration 0032
+INFO:Avb:   - native mean: [7.756139  1.3061761 7.41308   0.7386112] variance: [5.9015496e+04 2.3357260e-01 4.8266870e-01 5.2557063e-01]
+INFO:Avb:   - Noise mean: 2.417e+04 variance: 2.349e+09
+INFO:Avb:   - F: 5.876e+04 (Voxel: -5.875e+04, Node: -11.59)
+INFO:Avb: - Iteration 0033
+INFO:Avb:   - native mean: [8.078815  1.2878053 7.4491553 0.7379541] variance: [4.2018801e+04 1.9037317e-01 4.8171219e-01 5.2466476e-01]
+INFO:Avb:   - Noise mean: 2.756e+04 variance: 2.926e+09
+INFO:Avb:   - F: 2.261e+04 (Voxel: -2.26e+04, Node: -11.89)
+INFO:Avb: - Iteration 0034
+INFO:Avb:   - native mean: [7.428543   1.2976477  7.456854   0.73996997] variance: [7.6031508e+04 2.1266252e-01 4.8075384e-01 5.2077895e-01]
+INFO:Avb:   - Noise mean: 3.067e+04 variance: 3.466e+09
+INFO:Avb:   - F: 2.371e+04 (Voxel: -2.37e+04, Node: -11.66)
+INFO:Avb: - Iteration 0035
+INFO:Avb:   - native mean: [8.367784   1.3282315  7.390483   0.74081355] variance: [7.2026070e+04 2.0950846e-01 4.8206711e-01 5.2008855e-01]
+INFO:Avb:   - Noise mean: 3.338e+04 variance: 3.941e+09
+INFO:Avb:   - F: 2.753e+05 (Voxel: -2.753e+05, Node: -11.83)
+INFO:Avb: - Iteration 0036
+INFO:Avb:   - native mean: [7.868952   1.2910815  7.444496   0.73650354] variance: [4.7032770e+04 1.9137356e-01 4.8102248e-01 5.1781100e-01]
+INFO:Avb:   - Noise mean: 3.607e+04 variance: 4.415e+09
+INFO:Avb:   - F: 3.184e+04 (Voxel: -3.183e+04, Node: -12.01)
+INFO:Avb: - Iteration 0037
+INFO:Avb:   - native mean: [7.68392    1.30499    7.412101   0.73857594] variance: [7.4024797e+04 2.2769852e-01 4.8117942e-01 5.1573443e-01]
+INFO:Avb:   - Noise mean: 3.864e+04 variance: 4.868e+09
+INFO:Avb:   - F: 5.505e+04 (Voxel: -5.503e+04, Node: -11.78)
+INFO:Avb: - Iteration 0038
+INFO:Avb:   - native mean: [8.4320965 1.2989647 7.438514  0.7400006] variance: [5.6023551e+04 2.0191839e-01 4.8214173e-01 5.1792610e-01]
+INFO:Avb:   - Noise mean: 3.994e+04 variance: 5.109e+09
+INFO:Avb:   - F: 4.672e+04 (Voxel: -4.671e+04, Node: -12.04)
+INFO:Avb: - Iteration 0039
+INFO:Avb:   - native mean: [8.163316   1.2998294  7.429318   0.74054384] variance: [4.8035141e+04 2.0548300e-01 4.8131919e-01 5.1373345e-01]
+INFO:Avb:   - Noise mean: 4.101e+04 variance: 5.322e+09
+INFO:Avb:   - F: 4.208e+04 (Voxel: -4.207e+04, Node: -12.05)
+INFO:Avb: - Iteration 0040
+INFO:Avb:   - native mean: [8.306492  1.312637  7.414731  0.7411138] variance: [3.4022281e+04 2.1812570e-01 4.8158148e-01 5.1532125e-01]
+INFO:Avb:   - Noise mean: 4.285e+04 variance: 5.61e+09
+INFO:Avb:   - F: 3.204e+04 (Voxel: -3.203e+04, Node: -12.15)
+INFO:Avb: - Iteration 0041
+INFO:Avb:   - native mean: [6.913147   1.2658274  7.4741154  0.73773795] variance: [5.0018574e+04 2.0348509e-01 4.8016390e-01 5.1544154e-01]
+INFO:Avb:   - Noise mean: 4.359e+04 variance: 5.788e+09
+INFO:Avb:   - F: 2.085e+04 (Voxel: -2.083e+04, Node: -12.11)
+INFO:Avb: - Iteration 0042
+INFO:Avb:   - native mean: [7.202673  1.312295  7.401655  0.7384137] variance: [1.0001766e+05 2.3211068e-01 4.8193622e-01 5.1636404e-01]
+INFO:Avb:   - Noise mean: 4.452e+04 variance: 6.017e+09
+INFO:Avb:   - F: 4.396e+04 (Voxel: -4.395e+04, Node: -11.8)
+INFO:Avb: - Iteration 0043
+INFO:Avb:   - native mean: [8.208086   1.3152082  7.411446   0.73978555] variance: [6.3035719e+04 1.8339245e-01 4.8209256e-01 5.1612866e-01]
+INFO:Avb:   - Noise mean: 4.557e+04 variance: 6.167e+09
+INFO:Avb:   - F: 2.009e+04 (Voxel: -2.007e+04, Node: -12.19)
+INFO:Avb: - Iteration 0044
+INFO:Avb:   - native mean: [8.065481   1.2995003  7.421293   0.73984087] variance: [7.404632e+04 2.127991e-01 4.819732e-01 5.157976e-01]
+INFO:Avb:   - Noise mean: 4.646e+04 variance: 6.347e+09
+INFO:Avb:   - F: 4.117e+04 (Voxel: -4.116e+04, Node: -11.87)
+INFO:Avb: - Iteration 0045
+INFO:Avb:   - native mean: [8.850536   1.3258306  7.3966813  0.74021906] variance: [4.8029688e+04 2.1557924e-01 4.8221233e-01 5.1489788e-01]
+INFO:Avb:   - Noise mean: 4.766e+04 variance: 6.639e+09
+INFO:Avb:   - F: 5.859e+04 (Voxel: -5.858e+04, Node: -12.13)
+INFO:Avb: - Iteration 0046
+INFO:Avb:   - native mean: [7.760208  1.2659978 7.470404  0.7382887] variance: [1.9023752e+04 1.9601144e-01 4.8081347e-01 5.1444268e-01]
+INFO:Avb:   - Noise mean: 4.718e+04 variance: 6.541e+09
+INFO:Avb:   - F: 3.83e+04 (Voxel: -3.828e+04, Node: -12.32)
+INFO:Avb: - Iteration 0047
+INFO:Avb:   - native mean: [7.5877147 1.2982165 7.4493613 0.7403413] variance: [5.9012594e+04 2.3143160e-01 4.8106045e-01 5.1657593e-01]
+INFO:Avb:   - Noise mean: 4.721e+04 variance: 6.494e+09
+INFO:Avb:   - F: 5.176e+04 (Voxel: -5.175e+04, Node: -12.01)
+INFO:Avb: - Iteration 0048
+INFO:Avb:   - native mean: [7.638203   1.2898338  7.453554   0.73881155] variance: [6.4016031e+04 1.9192694e-01 4.8028862e-01 5.1358902e-01]
+INFO:Avb:   - Noise mean: 4.801e+04 variance: 6.618e+09
+INFO:Avb:   - F: 1.468e+04 (Voxel: -1.467e+04, Node: -12.2)
+INFO:Avb: - Iteration 0049
+INFO:Avb:   - native mean: [7.841978  1.3131716 7.4083686 0.7412695] variance: [8.903621e+04 2.054237e-01 4.815085e-01 5.151038e-01]
+INFO:Avb:   - Noise mean: 4.835e+04 variance: 6.731e+09
+INFO:Avb:   - F: 2.845e+04 (Voxel: -2.844e+04, Node: -11.94)
+INFO:Avb: - Iteration 0050
+INFO:Avb:   - native mean: [8.622043   1.3319765  7.402314   0.73949546] variance: [5.6034086e+04 1.9994016e-01 4.8196331e-01 5.1474768e-01]
+INFO:Avb:   - Noise mean: 4.827e+04 variance: 6.682e+09
+INFO:Avb:   - F: 5.444e+04 (Voxel: -5.443e+04, Node: -12.19)
+INFO:Avb: - Iteration 0051
+INFO:Avb:   - native mean: [7.776781  1.2854873 7.439548  0.7387452] variance: [4.5031391e+04 2.0297611e-01 4.8078626e-01 5.1401317e-01]
+INFO:Avb:   - Noise mean: 4.862e+04 variance: 6.787e+09
+INFO:Avb:   - F: 3.977e+04 (Voxel: -3.976e+04, Node: -12.14)
+INFO:Avb: - Iteration 0052
+INFO:Avb:   - native mean: [7.6487684 1.3021003 7.424799  0.7388698] variance: [6.9019094e+04 2.3036014e-01 4.8114711e-01 5.1582003e-01]
+INFO:Avb:   - Noise mean: 4.889e+04 variance: 6.87e+09
+INFO:Avb:   - F: 6.834e+04 (Voxel: -6.833e+04, Node: -11.97)
+INFO:Avb: - Iteration 0053
+INFO:Avb:   - native mean: [8.282731  1.2952031 7.4444294 0.7372127] variance: [4.9020594e+04 2.0142567e-01 4.8132575e-01 5.1650512e-01]
+INFO:Avb:   - Noise mean: 4.847e+04 variance: 6.791e+09
+INFO:Avb:   - F: 3.563e+04 (Voxel: -3.561e+04, Node: -12.23)
+INFO:Avb: - Iteration 0054
+INFO:Avb:   - native mean: [7.8978596 1.2989305 7.4413924 0.7378058] variance: [5.1034406e+04 2.1309300e-01 4.8155084e-01 5.1457846e-01]
+INFO:Avb:   - Noise mean: 4.946e+04 variance: 6.934e+09
+INFO:Avb:   - F: 3.116e+04 (Voxel: -3.115e+04, Node: -12.1)
+INFO:Avb: - Iteration 0055
+INFO:Avb:   - native mean: [7.802379   1.3071145  7.4437137  0.74080634] variance: [5.6022977e+04 2.1154441e-01 4.8115170e-01 5.1348317e-01]
+INFO:Avb:   - Noise mean: 4.999e+04 variance: 7.017e+09
+INFO:Avb:   - F: 2.3e+04 (Voxel: -2.299e+04, Node: -12.15)
+INFO:Avb: - Iteration 0056
+INFO:Avb:   - native mean: [7.346431   1.2877285  7.43756    0.73950183] variance: [6.2028375e+04 2.0820148e-01 4.8114911e-01 5.1272607e-01]
+INFO:Avb:   - Noise mean: 4.989e+04 variance: 6.943e+09
+INFO:Avb:   - F: 2.532e+04 (Voxel: -2.531e+04, Node: -12.12)
+INFO:Avb: - Iteration 0057
+INFO:Avb:   - native mean: [7.758981  1.3094296 7.4225016 0.7420668] variance: [7.3026609e+04 2.0810156e-01 4.8156965e-01 5.1528126e-01]
+INFO:Avb:   - Noise mean: 4.93e+04 variance: 6.919e+09
+INFO:Avb:   - F: 4.303e+04 (Voxel: -4.302e+04, Node: -12.07)
+INFO:Avb: - Iteration 0058
+INFO:Avb:   - native mean: [8.452676  1.3104893 7.425693  0.7385571] variance: [6.4029527e+04 2.0045269e-01 4.8111796e-01 5.1357734e-01]
+INFO:Avb:   - Noise mean: 4.936e+04 variance: 6.968e+09
+INFO:Avb:   - F: 3.97e+04 (Voxel: -3.969e+04, Node: -12.1)
+INFO:Avb: - Iteration 0059
+INFO:Avb:   - native mean: [8.080283   1.3013706  7.4135704  0.74049634] variance: [6.2038945e+04 2.0502779e-01 4.8154351e-01 5.1393336e-01]
+INFO:Avb:   - Noise mean: 4.969e+04 variance: 6.983e+09
+INFO:Avb:   - F: 5.55e+04 (Voxel: -5.549e+04, Node: -12.04)
+INFO:Avb: - Iteration 0060
+INFO:Avb:   - native mean: [8.444629   1.3189939  7.385263   0.74129915] variance: [3.6024055e+04 2.1479923e-01 4.8140374e-01 5.1485467e-01]
+INFO:Avb:   - Noise mean: 4.874e+04 variance: 6.822e+09
+INFO:Avb:   - F: 4.497e+04 (Voxel: -4.496e+04, Node: -12.25)
+INFO:Avb: - Iteration 0061
+INFO:Avb:   - native mean: [7.3995714 1.2690843 7.4813027 0.7385692] variance: [3.2019072e+04 2.0359913e-01 4.8042569e-01 5.1420987e-01]
+INFO:Avb:   - Noise mean: 4.848e+04 variance: 6.776e+09
+INFO:Avb:   - F: 2.867e+04 (Voxel: -2.866e+04, Node: -12.24)
+INFO:Avb: - Iteration 0062
+INFO:Avb:   - native mean: [6.9952106 1.2963105 7.452466  0.7396291] variance: [8.8012539e+04 2.3367050e-01 4.8133087e-01 5.1734668e-01]
+INFO:Avb:   - Noise mean: 4.818e+04 variance: 6.729e+09
+INFO:Avb:   - F: 4.101e+04 (Voxel: -4.1e+04, Node: -11.87)
+INFO:Avb: - Iteration 0063
+INFO:Avb:   - native mean: [8.137588  1.3111725 7.42734   0.7385513] variance: [8.4024141e+04 1.9559789e-01 4.8181388e-01 5.1702833e-01]
+INFO:Avb:   - Noise mean: 4.823e+04 variance: 6.801e+09
+INFO:Avb:   - F: 2.08e+04 (Voxel: -2.079e+04, Node: -12.06)
+INFO:Avb: - Iteration 0064
+INFO:Avb:   - native mean: [8.327754  1.3170359 7.4141393 0.7393199] variance: [6.7047039e+04 2.0043838e-01 4.8199695e-01 5.1589465e-01]
+INFO:Avb:   - Noise mean: 4.784e+04 variance: 6.63e+09
+INFO:Avb:   - F: 2.918e+04 (Voxel: -2.917e+04, Node: -12.04)
+INFO:Avb: - Iteration 0065
+INFO:Avb:   - native mean: [8.686152  1.3223525 7.3944426 0.742453 ] variance: [4.7034441e+04 2.1309006e-01 4.8132086e-01 5.1446372e-01]
+INFO:Avb:   - Noise mean: 4.751e+04 variance: 6.536e+09
+INFO:Avb:   - F: 3.974e+04 (Voxel: -3.973e+04, Node: -12.09)
+INFO:Avb: - Iteration 0066
+INFO:Avb:   - native mean: [7.845796  1.2746565 7.4737597 0.7384043] variance: [3.6025051e+04 2.0737389e-01 4.8116773e-01 5.1583701e-01]
+INFO:Avb:   - Noise mean: 4.642e+04 variance: 6.409e+09
+INFO:Avb:   - F: 5.134e+04 (Voxel: -5.133e+04, Node: -12.15)
+INFO:Avb: - Iteration 0067
+INFO:Avb:   - native mean: [7.6531253  1.2997068  7.4188766  0.73871696] variance: [5.1015238e+04 2.2224742e-01 4.8144281e-01 5.1565683e-01]
+INFO:Avb:   - Noise mean: 4.656e+04 variance: 6.494e+09
+INFO:Avb:   - F: 5.557e+04 (Voxel: -5.555e+04, Node: -12.1)
+INFO:Avb: - Iteration 0068
+INFO:Avb:   - native mean: [7.9203672 1.2893081 7.457303  0.7396112] variance: [4.7018305e+04 1.9691230e-01 4.8130074e-01 5.1856643e-01]
+INFO:Avb:   - Noise mean: 4.624e+04 variance: 6.389e+09
+INFO:Avb:   - F: 2.186e+04 (Voxel: -2.185e+04, Node: -12.2)
+INFO:Avb: - Iteration 0069
+INFO:Avb:   - native mean: [7.170965  1.3035167 7.4385567 0.742009 ] variance: [7.9035461e+04 2.0974226e-01 4.8085108e-01 5.1559031e-01]
+INFO:Avb:   - Noise mean: 4.65e+04 variance: 6.377e+09
+INFO:Avb:   - F: 5.5e+04 (Voxel: -5.499e+04, Node: -11.95)
+INFO:Avb: - Iteration 0070
+INFO:Avb:   - native mean: [7.9924455  1.3253833  7.3832088  0.74168634] variance: [7.7027367e+04 2.1440324e-01 4.8170686e-01 5.1648885e-01]
+INFO:Avb:   - Noise mean: 4.669e+04 variance: 6.395e+09
+INFO:Avb:   - F: 2.922e+04 (Voxel: -2.92e+04, Node: -12.02)
+INFO:Avb: - Iteration 0071
+INFO:Avb:   - native mean: [7.7604938  1.2915932  7.466542   0.73945844] variance: [5.8032930e+04 1.9717874e-01 4.8160577e-01 5.1520950e-01]
+INFO:Avb:   - Noise mean: 4.68e+04 variance: 6.499e+09
+INFO:Avb:   - F: 3.29e+04 (Voxel: -3.289e+04, Node: -12.11)
+INFO:Avb: - Iteration 0072
+INFO:Avb:   - native mean: [7.802535  1.307692  7.4110637 0.739887 ] variance: [7.7027047e+04 2.3212905e-01 4.8208752e-01 5.1696694e-01]
+INFO:Avb:   - Noise mean: 4.677e+04 variance: 6.495e+09
+INFO:Avb:   - F: 5.469e+04 (Voxel: -5.468e+04, Node: -11.87)
+INFO:Avb: - Iteration 0073
+INFO:Avb:   - native mean: [8.571252  1.2979629 7.4268193 0.739341 ] variance: [5.6026840e+04 1.9838394e-01 4.8192522e-01 5.1400393e-01]
+INFO:Avb:   - Noise mean: 4.768e+04 variance: 6.576e+09
+INFO:Avb:   - F: 4.669e+04 (Voxel: -4.667e+04, Node: -12.11)
+INFO:Avb: - Iteration 0074
+INFO:Avb:   - native mean: [8.208791  1.2984439 7.4253817 0.738971 ] variance: [4.6036406e+04 2.0890476e-01 4.8150676e-01 5.1293761e-01]
+INFO:Avb:   - Noise mean: 4.909e+04 variance: 6.814e+09
+INFO:Avb:   - F: 4.23e+04 (Voxel: -4.228e+04, Node: -12.12)
+INFO:Avb: - Iteration 0075
+INFO:Avb:   - native mean: [8.464522  1.3085203 7.4237795 0.7407611] variance: [3.2022104e+04 2.1039683e-01 4.8133990e-01 5.1508546e-01]
+INFO:Avb:   - Noise mean: 4.813e+04 variance: 6.722e+09
+INFO:Avb:   - F: 3.089e+04 (Voxel: -3.088e+04, Node: -12.25)
+INFO:Avb: - Iteration 0076
+INFO:Avb:   - native mean: [7.066123   1.268062   7.4990773  0.73758894] variance: [4.9017293e+04 1.9914588e-01 4.7991559e-01 5.1479787e-01]
+INFO:Avb:   - Noise mean: 4.831e+04 variance: 6.718e+09
+INFO:Avb:   - F: 2.199e+04 (Voxel: -2.198e+04, Node: -12.16)
+INFO:Avb: - Iteration 0077
+INFO:Avb:   - native mean: [7.50855    1.3139895  7.417752   0.73972857] variance: [9.0015859e+04 2.2111970e-01 4.8133257e-01 5.1496893e-01]
+INFO:Avb:   - Noise mean: 4.778e+04 variance: 6.668e+09
+INFO:Avb:   - F: 4.033e+04 (Voxel: -4.032e+04, Node: -11.97)
+INFO:Avb: - Iteration 0078
+INFO:Avb:   - native mean: [8.398268  1.3148015 7.4339895 0.7405428] variance: [6.2029992e+04 1.8054743e-01 4.8126599e-01 5.1437354e-01]
+INFO:Avb:   - Noise mean: 4.814e+04 variance: 6.644e+09
+INFO:Avb:   - F: 2.211e+04 (Voxel: -2.21e+04, Node: -12.24)
+INFO:Avb: - Iteration 0079
+INFO:Avb:   - native mean: [8.139667   1.3112832  7.4053135  0.74205667] variance: [6.5043633e+04 2.0539300e-01 4.8084918e-01 5.1424819e-01]
+INFO:Avb:   - Noise mean: 4.825e+04 variance: 6.682e+09
+INFO:Avb:   - F: 3.844e+04 (Voxel: -3.843e+04, Node: -12.05)
+INFO:Avb: - Iteration 0080
+INFO:Avb:   - native mean: [8.477535  1.3193214 7.398501  0.7409856] variance: [5.4028434e+04 2.2061823e-01 4.8165697e-01 5.1388341e-01]
+INFO:Avb:   - Noise mean: 4.778e+04 variance: 6.6e+09
+INFO:Avb:   - F: 6.375e+04 (Voxel: -6.373e+04, Node: -12.09)
+INFO:Avb: - Iteration 0081
+INFO:Avb:   - native mean: [7.487766  1.2766657 7.4557185 0.739187 ] variance: [3.0023363e+04 2.0289958e-01 4.8124436e-01 5.1588392e-01]
+INFO:Avb:   - Noise mean: 4.796e+04 variance: 6.59e+09
+INFO:Avb:   - F: 4.681e+04 (Voxel: -4.68e+04, Node: -12.28)
+INFO:Avb: - Iteration 0082
+INFO:Avb:   - native mean: [7.1061544 1.2948545 7.4412704 0.7393645] variance: [6.2018566e+04 2.3491548e-01 4.8128271e-01 5.1472872e-01]
+INFO:Avb:   - Noise mean: 4.846e+04 variance: 6.647e+09
+INFO:Avb:   - F: 4.526e+04 (Voxel: -4.525e+04, Node: -12.01)
+INFO:Avb: - Iteration 0083
+INFO:Avb:   - native mean: [7.5642433 1.2899445 7.459004  0.7384788] variance: [7.3019188e+04 2.0294559e-01 4.8079810e-01 5.1387268e-01]
+INFO:Avb:   - Noise mean: 4.848e+04 variance: 6.672e+09
+INFO:Avb:   - F: 1.593e+04 (Voxel: -1.592e+04, Node: -12.09)
+INFO:Avb: - Iteration 0084
+INFO:Avb:   - native mean: [7.9387636 1.3130889 7.4066825 0.7395892] variance: [9.2039469e+04 2.1052685e-01 4.8161951e-01 5.1529860e-01]
+INFO:Avb:   - Noise mean: 4.797e+04 variance: 6.677e+09
+INFO:Avb:   - F: 3.115e+04 (Voxel: -3.114e+04, Node: -11.89)
+INFO:Avb: - Iteration 0085
+INFO:Avb:   - native mean: [8.772277  1.3345339 7.3804026 0.7417707] variance: [5.1037070e+04 2.0081210e-01 4.8218942e-01 5.1556677e-01]
+INFO:Avb:   - Noise mean: 4.892e+04 variance: 6.914e+09
+INFO:Avb:   - F: 3.049e+04 (Voxel: -3.048e+04, Node: -12.17)
+INFO:Avb: - Iteration 0086
+INFO:Avb:   - native mean: [7.7728615  1.2737423  7.46063    0.73919946] variance: [4.4031895e+04 2.0296693e-01 4.8101568e-01 5.1767665e-01]
+INFO:Avb:   - Noise mean: 4.746e+04 variance: 6.629e+09
+INFO:Avb:   - F: 1.215e+05 (Voxel: -1.215e+05, Node: -12.08)
+INFO:Avb: - Iteration 0087
+INFO:Avb:   - native mean: [7.916229   1.3117514  7.404563   0.74127525] variance: [6.7018438e+04 2.2993569e-01 4.8165357e-01 5.1738816e-01]
+INFO:Avb:   - Noise mean: 4.799e+04 variance: 6.744e+09
+INFO:Avb:   - F: 6.981e+04 (Voxel: -6.98e+04, Node: -11.95)
+INFO:Avb: - Iteration 0088
+INFO:Avb:   - native mean: [8.240595  1.2849612 7.4559135 0.7372031] variance: [4.1020297e+04 1.8543369e-01 4.8115966e-01 5.1586360e-01]
+INFO:Avb:   - Noise mean: 4.773e+04 variance: 6.716e+09
+INFO:Avb:   - F: 5.569e+04 (Voxel: -5.568e+04, Node: -12.27)
+INFO:Avb: - Iteration 0089
+INFO:Avb:   - native mean: [7.990833  1.304648  7.444697  0.7400904] variance: [5.8031875e+04 2.1531592e-01 4.8137355e-01 5.1441979e-01]
+INFO:Avb:   - Noise mean: 4.854e+04 variance: 6.783e+09
+INFO:Avb:   - F: 3.415e+04 (Voxel: -3.414e+04, Node: -12.04)
+INFO:Avb: - Iteration 0090
+INFO:Avb:   - native mean: [7.913821   1.3081374  7.4506183  0.74221975] variance: [5.5020855e+04 2.0353757e-01 4.8065642e-01 5.1427478e-01]
+INFO:Avb:   - Noise mean: 4.85e+04 variance: 6.708e+09
+INFO:Avb:   - F: 2.408e+04 (Voxel: -2.407e+04, Node: -12.19)
+INFO:Avb: - Iteration 0091
+INFO:Avb:   - native mean: [7.5693846  1.295736   7.465123   0.73876345] variance: [6.3023648e+04 2.0761041e-01 4.8101845e-01 5.1472366e-01]
+INFO:Avb:   - Noise mean: 4.94e+04 variance: 6.864e+09
+INFO:Avb:   - F: 3.092e+04 (Voxel: -3.09e+04, Node: -12.12)
+INFO:Avb: - Iteration 0092
+INFO:Avb:   - native mean: [7.646041   1.3126775  7.430545   0.73940307] variance: [7.2025359e+04 2.1484357e-01 4.8158276e-01 5.1321983e-01]
+INFO:Avb:   - Noise mean: 4.979e+04 variance: 6.874e+09
+INFO:Avb:   - F: 4.436e+04 (Voxel: -4.435e+04, Node: -12.06)
+INFO:Avb: - Iteration 0093
+INFO:Avb:   - native mean: [8.236224  1.303803  7.423595  0.7397328] variance: [6.3029797e+04 2.0364553e-01 4.8149589e-01 5.1463181e-01]
+INFO:Avb:   - Noise mean: 4.957e+04 variance: 6.82e+09
+INFO:Avb:   - F: 3.115e+04 (Voxel: -3.114e+04, Node: -12.12)
+INFO:Avb: - Iteration 0094
+INFO:Avb:   - native mean: [7.9761915 1.3002183 7.42387   0.7398006] variance: [7.0039367e+04 2.1093419e-01 4.8176399e-01 5.1469141e-01]
+INFO:Avb:   - Noise mean: 4.847e+04 variance: 6.72e+09
+INFO:Avb:   - F: 5.621e+04 (Voxel: -5.619e+04, Node: -11.99)
+INFO:Avb: - Iteration 0095
+INFO:Avb:   - native mean: [8.377138   1.3220714  7.371382   0.74202967] variance: [3.4030016e+04 2.1572210e-01 4.8184687e-01 5.1544482e-01]
+INFO:Avb:   - Noise mean: 4.865e+04 variance: 6.684e+09
+INFO:Avb:   - F: 4.342e+04 (Voxel: -4.341e+04, Node: -12.28)
+INFO:Avb: - Iteration 0096
+INFO:Avb:   - native mean: [7.283019   1.2638088  7.4578753  0.73987085] variance: [3.0021828e+04 2.0644380e-01 4.8043928e-01 5.1469260e-01]
+INFO:Avb:   - Noise mean: 4.844e+04 variance: 6.672e+09
+INFO:Avb:   - F: 1.141e+05 (Voxel: -1.141e+05, Node: -12.22)
+INFO:Avb: - Iteration 0097
+INFO:Avb:   - native mean: [6.969009  1.2975734 7.451266  0.7402729] variance: [8.7012289e+04 2.3463699e-01 4.7959724e-01 5.1381892e-01]
+INFO:Avb:   - Noise mean: 4.826e+04 variance: 6.657e+09
+INFO:Avb:   - F: 4.039e+04 (Voxel: -4.038e+04, Node: -11.91)
+INFO:Avb: - Iteration 0098
+INFO:Avb:   - native mean: [8.0920725  1.3066189  7.411451   0.73891777] variance: [8.6023922e+04 1.9731393e-01 4.8192054e-01 5.1567978e-01]
+INFO:Avb:   - Noise mean: 4.834e+04 variance: 6.661e+09
+INFO:Avb:   - F: 2.05e+04 (Voxel: -2.048e+04, Node: -12.05)
+INFO:Avb: - Iteration 0099
+INFO:Avb:   - native mean: [8.376489  1.3176806 7.4187374 0.7406758] variance: [6.8047359e+04 1.9553885e-01 4.8200557e-01 5.1618248e-01]
+INFO:Avb:   - Noise mean: 4.779e+04 variance: 6.609e+09
+INFO:Avb:   - F: 3.006e+04 (Voxel: -3.005e+04, Node: -12.07)
+INFO:Avb: - Iteration 0100
+INFO:Avb:   - native mean: [8.7146635  1.3199298  7.392061   0.74164855] variance: [4.8035078e+04 2.1257773e-01 4.8210400e-01 5.1728272e-01]
+INFO:Avb:   - Noise mean: 4.703e+04 variance: 6.516e+09
+INFO:Avb:   - F: 3.916e+04 (Voxel: -3.915e+04, Node: -12.08)
+INFO:Avb: - Iteration 0101
+INFO:Avb:   - native mean: [7.9772735  1.2747862  7.457281   0.74084705] variance: [3.6025059e+04 2.0079195e-01 4.8139563e-01 5.1602966e-01]
+INFO:Avb:   - Noise mean: 4.732e+04 variance: 6.516e+09
+INFO:Avb:   - F: 5.273e+04 (Voxel: -5.272e+04, Node: -12.17)
+INFO:Avb: - Iteration 0102
+INFO:Avb:   - native mean: [7.736668  1.2999513 7.4371724 0.7393782] variance: [5.5014648e+04 2.2096466e-01 4.8091352e-01 5.1466322e-01]
+INFO:Avb:   - Noise mean: 4.719e+04 variance: 6.529e+09
+INFO:Avb:   - F: 6.321e+04 (Voxel: -6.32e+04, Node: -12.07)
+INFO:Avb: - Iteration 0103
+INFO:Avb:   - native mean: [8.09975    1.297451   7.4271874  0.73877054] variance: [4.1016859e+04 1.9516926e-01 4.8087674e-01 5.1471066e-01]
+INFO:Avb:   - Noise mean: 4.78e+04 variance: 6.672e+09
+INFO:Avb:   - F: 2.217e+04 (Voxel: -2.216e+04, Node: -12.29)
+INFO:Avb: - Iteration 0104
+INFO:Avb:   - native mean: [7.22272   1.2931181 7.4788465 0.7399937] variance: [7.7030234e+04 2.0668115e-01 4.8027217e-01 5.1545131e-01]
+INFO:Avb:   - Noise mean: 4.665e+04 variance: 6.481e+09
+INFO:Avb:   - F: 2.428e+04 (Voxel: -2.427e+04, Node: -11.95)
+INFO:Avb: - Iteration 0105
+INFO:Avb:   - native mean: [8.251894   1.3400563  7.3916535  0.74204385] variance: [7.6025375e+04 2.1901947e-01 4.8223937e-01 5.1358110e-01]
+INFO:Avb:   - Noise mean: 4.709e+04 variance: 6.525e+09
+INFO:Avb:   - F: 3.022e+04 (Voxel: -3.02e+04, Node: -12.04)
+INFO:Avb: - Iteration 0106
+INFO:Avb:   - native mean: [7.577447   1.2838643  7.457743   0.73913825] variance: [4.7033906e+04 1.9083525e-01 4.8153549e-01 5.1494652e-01]
+INFO:Avb:   - Noise mean: 4.718e+04 variance: 6.572e+09
+INFO:Avb:   - F: 2.793e+04 (Voxel: -2.792e+04, Node: -12.2)
+INFO:Avb: - Iteration 0107
+INFO:Avb:   - native mean: [7.5711164  1.3076627  7.4083853  0.74273974] variance: [8.4026461e+04 2.3928700e-01 4.8154867e-01 5.1478124e-01]
+INFO:Avb:   - Noise mean: 4.664e+04 variance: 6.399e+09
+INFO:Avb:   - F: 7.884e+04 (Voxel: -7.882e+04, Node: -11.82)
+INFO:Avb: - Iteration 0108
+INFO:Avb:   - native mean: [8.2656975 1.2982897 7.419812  0.7427899] variance: [6.0030383e+04 2.0202188e-01 4.8230866e-01 5.1513773e-01]
+INFO:Avb:   - Noise mean: 4.701e+04 variance: 6.365e+09
+INFO:Avb:   - F: 4.725e+04 (Voxel: -4.724e+04, Node: -12.13)
+INFO:Avb: - Iteration 0109
+INFO:Avb:   - native mean: [8.151744   1.2988682  7.4098926  0.74052274] variance: [4.7038371e+04 2.0735794e-01 4.8156044e-01 5.1714367e-01]
+INFO:Avb:   - Noise mean: 4.625e+04 variance: 6.296e+09
+INFO:Avb:   - F: 4.119e+04 (Voxel: -4.118e+04, Node: -12.11)
+INFO:Avb: - Iteration 0110
+INFO:Avb:   - native mean: [8.44464   1.3094689 7.433028  0.7396287] variance: [3.5023383e+04 2.1743244e-01 4.8137581e-01 5.1744944e-01]
+INFO:Avb:   - Noise mean: 4.626e+04 variance: 6.311e+09
+INFO:Avb:   - F: 3.404e+04 (Voxel: -3.403e+04, Node: -12.15)
+INFO:Avb: - Iteration 0111
+INFO:Avb:   - native mean: [7.1751075 1.2711179 7.5005617 0.7381354] variance: [4.5018758e+04 1.9905841e-01 4.8065975e-01 5.1566315e-01]
+INFO:Avb:   - Noise mean: 4.599e+04 variance: 6.286e+09
+INFO:Avb:   - F: 2.019e+04 (Voxel: -2.018e+04, Node: -12.15)
+INFO:Avb: - Iteration 0112
+INFO:Avb:   - native mean: [7.451148  1.3090396 7.4237075 0.7411819] variance: [9.1016477e+04 2.2154117e-01 4.8156336e-01 5.1623178e-01]
+INFO:Avb:   - Noise mean: 4.593e+04 variance: 6.336e+09
+INFO:Avb:   - F: 4.092e+04 (Voxel: -4.091e+04, Node: -11.86)
+INFO:Avb: - Iteration 0113
+INFO:Avb:   - native mean: [8.502159  1.3204458 7.418157  0.742119 ] variance: [6.4029613e+04 1.8239614e-01 4.8179290e-01 5.1598531e-01]
+INFO:Avb:   - Noise mean: 4.683e+04 variance: 6.372e+09
+INFO:Avb:   - F: 2.742e+04 (Voxel: -2.741e+04, Node: -12.18)
+INFO:Avb: - Iteration 0114
+INFO:Avb:   - native mean: [7.9433517  1.3080487  7.391356   0.74118763] variance: [6.9044312e+04 2.0645773e-01 4.8122844e-01 5.1491785e-01]
+INFO:Avb:   - Noise mean: 4.83e+04 variance: 6.61e+09
+INFO:Avb:   - F: 4.846e+04 (Voxel: -4.845e+04, Node: -11.96)
+INFO:Avb: - Iteration 0115
+INFO:Avb:   - native mean: [8.41951    1.3211448  7.402518   0.74139917] variance: [5.4027145e+04 2.1709803e-01 4.8170999e-01 5.1483017e-01]
+INFO:Avb:   - Noise mean: 4.828e+04 variance: 6.599e+09
+INFO:Avb:   - F: 5.711e+04 (Voxel: -5.71e+04, Node: -12.11)
+INFO:Avb: - Iteration 0116
+INFO:Avb:   - native mean: [7.6299796 1.2713709 7.4555674 0.7389392] variance: [3.6021938e+04 2.0677966e-01 4.8108020e-01 5.1555324e-01]
+INFO:Avb:   - Noise mean: 4.832e+04 variance: 6.685e+09
+INFO:Avb:   - F: 4.255e+04 (Voxel: -4.254e+04, Node: -12.24)
+INFO:Avb: - Iteration 0117
+INFO:Avb:   - native mean: [7.5802617  1.3047045  7.4375486  0.74061877] variance: [6.0015500e+04 2.3367475e-01 4.8123384e-01 5.1399404e-01]
+INFO:Avb:   - Noise mean: 4.806e+04 variance: 6.751e+09
+INFO:Avb:   - F: 5.185e+04 (Voxel: -5.184e+04, Node: -12.05)
+INFO:Avb: - Iteration 0118
+INFO:Avb:   - native mean: [7.603223   1.2888691  7.4691644  0.73849976] variance: [6.5019648e+04 2.0127966e-01 4.8065180e-01 5.1474094e-01]
+INFO:Avb:   - Noise mean: 4.836e+04 variance: 6.798e+09
+INFO:Avb:   - F: 1.409e+04 (Voxel: -1.408e+04, Node: -12.11)
+INFO:Avb: - Iteration 0119
+INFO:Avb:   - native mean: [7.8160243  1.3120294  7.3937554  0.73916835] variance: [8.9038609e+04 2.1772271e-01 4.8191130e-01 5.1311648e-01]
+INFO:Avb:   - Noise mean: 4.843e+04 variance: 6.725e+09
+INFO:Avb:   - F: 2.829e+04 (Voxel: -2.827e+04, Node: -11.89)
+INFO:Avb: - Iteration 0120
+INFO:Avb:   - native mean: [8.59148   1.3291807 7.407956  0.7411415] variance: [5.4036199e+04 1.9793761e-01 4.8190233e-01 5.1552194e-01]
+INFO:Avb:   - Noise mean: 4.826e+04 variance: 6.703e+09
+INFO:Avb:   - F: 2.983e+04 (Voxel: -2.982e+04, Node: -12.19)
+INFO:Avb: - Iteration 0121
+INFO:Avb:   - native mean: [7.642749  1.2823133 7.4365096 0.7403242] variance: [4.3035953e+04 2.0341775e-01 4.8131764e-01 5.1910502e-01]
+INFO:Avb:   - Noise mean: 4.807e+04 variance: 6.725e+09
+INFO:Avb:   - F: 4.31e+04 (Voxel: -4.309e+04, Node: -12.12)
+INFO:Avb: - Iteration 0122
+INFO:Avb:   - native mean: [7.701042  1.2985121 7.423908  0.7405024] variance: [6.9019820e+04 2.2513759e-01 4.8147234e-01 5.1502812e-01]
+INFO:Avb:   - Noise mean: 4.869e+04 variance: 6.763e+09
+INFO:Avb:   - F: 6.833e+04 (Voxel: -6.832e+04, Node: -11.97)
+INFO:Avb: - Iteration 0123
+INFO:Avb:   - native mean: [8.376234   1.3026665  7.4269843  0.74162626] variance: [4.4020586e+04 1.9276248e-01 4.8157948e-01 5.1371181e-01]
+INFO:Avb:   - Noise mean: 4.851e+04 variance: 6.623e+09
+INFO:Avb:   - F: 3.701e+04 (Voxel: -3.7e+04, Node: -12.3)
+INFO:Avb: - Iteration 0124
+INFO:Avb:   - native mean: [7.803068  1.2983491 7.4536805 0.7387854] variance: [5.3033258e+04 2.0798254e-01 4.8090598e-01 5.1463991e-01]
+INFO:Avb:   - Noise mean: 4.856e+04 variance: 6.708e+09
+INFO:Avb:   - F: 3.687e+04 (Voxel: -3.686e+04, Node: -12.11)
+INFO:Avb: - Iteration 0125
+INFO:Avb:   - native mean: [7.7709084  1.3136553  7.433806   0.73911256] variance: [6.5020855e+04 2.1749875e-01 4.8117608e-01 5.1570052e-01]
+INFO:Avb:   - Noise mean: 4.906e+04 variance: 6.852e+09
+INFO:Avb:   - F: 2.709e+04 (Voxel: -2.708e+04, Node: -12.09)
+INFO:Avb: - Iteration 0126
+INFO:Avb:   - native mean: [7.4083014 1.2853997 7.4581947 0.7400164] variance: [6.9024234e+04 2.0406204e-01 4.8159158e-01 5.1455015e-01]
+INFO:Avb:   - Noise mean: 4.829e+04 variance: 6.728e+09
+INFO:Avb:   - F: 4.98e+04 (Voxel: -4.979e+04, Node: -12.08)
+INFO:Avb: - Iteration 0127
+INFO:Avb:   - native mean: [7.876366   1.3165601  7.413339   0.73837674] variance: [7.9026930e+04 2.1655586e-01 4.8214427e-01 5.1464158e-01]
+INFO:Avb:   - Noise mean: 4.755e+04 variance: 6.619e+09
+INFO:Avb:   - F: 4.462e+04 (Voxel: -4.461e+04, Node: -11.99)
+INFO:Avb: - Iteration 0128
+INFO:Avb:   - native mean: [8.4882555 1.3028115 7.41658   0.7393031] variance: [6.1031316e+04 1.9861957e-01 4.8145017e-01 5.1507640e-01]
+INFO:Avb:   - Noise mean: 4.8e+04 variance: 6.608e+09
+INFO:Avb:   - F: 3.923e+04 (Voxel: -3.922e+04, Node: -12.08)
+INFO:Avb: - Iteration 0129
+INFO:Avb:   - native mean: [8.323479   1.304159   7.411746   0.74061424] variance: [5.9039559e+04 2.1078299e-01 4.8150426e-01 5.1433301e-01]
+INFO:Avb:   - Noise mean: 4.764e+04 variance: 6.537e+09
+INFO:Avb:   - F: 5.414e+04 (Voxel: -5.413e+04, Node: -12.01)
+INFO:Avb: - Iteration 0130
+INFO:Avb:   - native mean: [8.559322  1.312748  7.41255   0.7407503] variance: [3.0024035e+04 2.1025141e-01 4.8145300e-01 5.1515281e-01]
+INFO:Avb:   - Noise mean: 4.789e+04 variance: 6.563e+09
+INFO:Avb:   - F: 4.235e+04 (Voxel: -4.234e+04, Node: -12.26)
+INFO:Avb: - Iteration 0131
+INFO:Avb:   - native mean: [7.5070534  1.2724355  7.475421   0.73799217] variance: [2.5018502e+04 2.0494956e-01 4.8057911e-01 5.1606846e-01]
+INFO:Avb:   - Noise mean: 4.648e+04 variance: 6.41e+09
+INFO:Avb:   - F: 2.766e+04 (Voxel: -2.764e+04, Node: -12.28)
+INFO:Avb: - Iteration 0132
+INFO:Avb:   - native mean: [6.8582172 1.293812  7.449957  0.7402141] variance: [7.8011438e+04 2.2610593e-01 4.8072490e-01 5.1742101e-01]
+INFO:Avb:   - Noise mean: 4.756e+04 variance: 6.658e+09
+INFO:Avb:   - F: 3.834e+04 (Voxel: -3.833e+04, Node: -11.93)
+INFO:Avb: - Iteration 0133
+INFO:Avb:   - native mean: [7.8533926  1.3112366  7.414707   0.73901826] variance: [8.5022516e+04 1.9583918e-01 4.8119533e-01 5.1544654e-01]
+INFO:Avb:   - Noise mean: 4.743e+04 variance: 6.544e+09
+INFO:Avb:   - F: 1.872e+04 (Voxel: -1.871e+04, Node: -12.08)
+INFO:Avb: - Iteration 0134
+INFO:Avb:   - native mean: [7.967664  1.3183521 7.418183  0.7409908] variance: [7.6050039e+04 1.9919312e-01 4.8175615e-01 5.1577932e-01]
+INFO:Avb:   - Noise mean: 4.777e+04 variance: 6.625e+09
+INFO:Avb:   - F: 3.158e+04 (Voxel: -3.156e+04, Node: -12)
+INFO:Avb: - Iteration 0135
+INFO:Avb:   - native mean: [8.5443    1.32507   7.4069567 0.7396963] variance: [5.7036066e+04 2.1515387e-01 4.8189774e-01 5.1502317e-01]
+INFO:Avb:   - Noise mean: 4.749e+04 variance: 6.558e+09
+INFO:Avb:   - F: 5.371e+04 (Voxel: -5.369e+04, Node: -12.05)
+INFO:Avb: - Iteration 0136
+INFO:Avb:   - native mean: [7.8015103 1.280219  7.4576073 0.7374096] variance: [4.1027273e+04 2.0979196e-01 4.8155475e-01 5.1426893e-01]
+INFO:Avb:   - Noise mean: 4.841e+04 variance: 6.76e+09
+INFO:Avb:   - F: 5.561e+04 (Voxel: -5.559e+04, Node: -12.15)
+INFO:Avb: - Iteration 0137
+INFO:Avb:   - native mean: [7.5826025  1.2939928  7.429683   0.74019974] variance: [5.5016602e+04 2.2673358e-01 4.8144522e-01 5.1492649e-01]
+INFO:Avb:   - Noise mean: 4.926e+04 variance: 6.939e+09
+INFO:Avb:   - F: 5.685e+04 (Voxel: -5.684e+04, Node: -12.07)
+INFO:Avb: - Iteration 0138
+INFO:Avb:   - native mean: [8.175431   1.2931142  7.44751    0.74037963] variance: [5.0018414e+04 2.0370731e-01 4.8116025e-01 5.1439965e-01]
+INFO:Avb:   - Noise mean: 4.838e+04 variance: 6.89e+09
+INFO:Avb:   - F: 2.282e+04 (Voxel: -2.281e+04, Node: -12.2)
+INFO:Avb: - Iteration 0139
+INFO:Avb:   - native mean: [7.484038  1.2961093 7.4397397 0.7393801] variance: [7.4032375e+04 2.0465033e-01 4.8067200e-01 5.1604414e-01]
+INFO:Avb:   - Noise mean: 4.804e+04 variance: 6.827e+09
+INFO:Avb:   - F: 2.456e+04 (Voxel: -2.454e+04, Node: -11.97)
+INFO:Avb: - Iteration 0140
+INFO:Avb:   - native mean: [8.377976   1.3286103  7.3743935  0.74025816] variance: [7.1027188e+04 2.1309385e-01 4.8168600e-01 5.1713479e-01]
+INFO:Avb:   - Noise mean: 4.836e+04 variance: 6.918e+09
+INFO:Avb:   - F: 2.795e+04 (Voxel: -2.794e+04, Node: -12.03)
+INFO:Avb: - Iteration 0141
+INFO:Avb:   - native mean: [7.8162804  1.2895888  7.454174   0.73979354] variance: [4.7032336e+04 1.8838523e-01 4.8127747e-01 5.1756436e-01]
+INFO:Avb:   - Noise mean: 4.727e+04 variance: 6.653e+09
+INFO:Avb:   - F: 3.049e+04 (Voxel: -3.048e+04, Node: -12.17)
+INFO:Avb: - Iteration 0142
+INFO:Avb:   - native mean: [7.7575955 1.309082  7.409549  0.7398239] variance: [7.3024211e+04 2.2603026e-01 4.8088971e-01 5.1574779e-01]
+INFO:Avb:   - Noise mean: 4.765e+04 variance: 6.756e+09
+INFO:Avb:   - F: 5.878e+04 (Voxel: -5.876e+04, Node: -11.9)
+INFO:Avb: - Iteration 0143
+INFO:Avb:   - native mean: [8.445482   1.299042   7.443735   0.73949426] variance: [5.9023633e+04 1.9763291e-01 4.8135769e-01 5.1737356e-01]
+INFO:Avb:   - Noise mean: 4.724e+04 variance: 6.766e+09
+INFO:Avb:   - F: 4.723e+04 (Voxel: -4.722e+04, Node: -12.1)
+INFO:Avb: - Iteration 0144
+INFO:Avb:   - native mean: [8.213452  1.3048931 7.4303007 0.7390886] variance: [4.7035727e+04 2.0679595e-01 4.8166603e-01 5.1659423e-01]
+INFO:Avb:   - Noise mean: 4.715e+04 variance: 6.736e+09
+INFO:Avb:   - F: 4.294e+04 (Voxel: -4.293e+04, Node: -12.11)
+INFO:Avb: - Iteration 0145
+INFO:Avb:   - native mean: [8.257218   1.3088298  7.4201436  0.74180925] variance: [3.1023490e+04 2.1346644e-01 4.8151824e-01 5.1380372e-01]
+INFO:Avb:   - Noise mean: 4.682e+04 variance: 6.701e+09
+INFO:Avb:   - F: 5.306e+04 (Voxel: -5.304e+04, Node: -12.22)
+INFO:Avb: - Iteration 0146
+INFO:Avb:   - native mean: [6.855552  1.2678164 7.52351   0.7374675] variance: [5.7018422e+04 2.0663115e-01 4.8031440e-01 5.1571435e-01]
+INFO:Avb:   - Noise mean: 4.78e+04 variance: 6.809e+09
+INFO:Avb:   - F: 2.897e+04 (Voxel: -2.895e+04, Node: -12.06)
+INFO:Avb: - Iteration 0147
+INFO:Avb:   - native mean: [7.2165766  1.3207104  7.408696   0.73835194] variance: [9.3021203e+04 2.2826184e-01 4.8230004e-01 5.1648068e-01]
+INFO:Avb:   - Noise mean: 4.84e+04 variance: 6.935e+09
+INFO:Avb:   - F: 4.179e+04 (Voxel: -4.178e+04, Node: -11.91)
+INFO:Avb: - Iteration 0148
+INFO:Avb:   - native mean: [8.1884985  1.3031715  7.4370365  0.74026114] variance: [6.6032094e+04 1.8298736e-01 4.8159105e-01 5.1362181e-01]
+INFO:Avb:   - Noise mean: 4.866e+04 variance: 6.925e+09
+INFO:Avb:   - F: 2.151e+04 (Voxel: -2.149e+04, Node: -12.17)
+INFO:Avb: - Iteration 0149
+INFO:Avb:   - native mean: [8.224946  1.3155434 7.385567  0.7407023] variance: [7.6045008e+04 2.1605596e-01 4.8131078e-01 5.1423424e-01]
+INFO:Avb:   - Noise mean: 4.917e+04 variance: 6.87e+09
+INFO:Avb:   - F: 4.919e+04 (Voxel: -4.918e+04, Node: -11.92)
+INFO:Avb: - Iteration 0150
+INFO:Avb:   - native mean: [8.601586  1.3180141 7.3870335 0.7413938] variance: [4.7030062e+04 2.1248004e-01 4.8174724e-01 5.1437527e-01]
+INFO:Avb:   - Noise mean: 4.921e+04 variance: 6.852e+09
+INFO:Avb:   - F: 5.773e+04 (Voxel: -5.772e+04, Node: -12.16)
+INFO:vaby.main:DONE: 57.383s
+INFO:Avb:Output written to: avb_km_snr_10000000
